@@ -6,11 +6,11 @@ const Footer = () => {
             <div className="mx-auto flex max-w-screen-xl flex-col-reverse items-center justify-between gap-4 text-center text-sm md:flex-row  ">
                 
                 <p className="text-sm text-gray-600 md:text-base">
-                    Designed and coded 
+                    {/* Designed and coded 
                     <a className="text-teal-600 underline hover:brightness-125" href="http://github.com/devXprite/">
                         DevXprite
-                    </a>
-                    | Source available on GitHub, give it a ⭐️!
+                    </a>| */}
+                     Source available on <a href="https://github.com/devXprite/PollPower">GitHub</a>, give it a ⭐️!
                 </p>
                 <div className="flex items-center gap-2 text-sm md:text-base">
                     <p>Language:</p>

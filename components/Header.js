@@ -10,7 +10,7 @@ const Header = () => {
                 <div>
                     <h2 className="text-base font-semibold md:text-xl" translate='no' >PollPower</h2>
                     {/* <h2 className="text-base font-semibold md:text-xl">PowerPoll</h2> */}
-                    <p className='text-[10px] md:text-xs text-primary-200 font-medium -mt-1'>Chunav ka parv Desh ka garv</p>
+                    <p className='text-[10px] md:text-xs text-primary-200 font-medium -mt-1'>Vote with Confidence</p>
                 </div>
 
                 {/* <ReactTyped
