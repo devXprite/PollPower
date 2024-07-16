@@ -1,0 +1,41 @@
+{
+  "name": "polling-system",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "postinstall": "prisma generate",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/third-parties": "^14.2.3",
+    "axios": "^1.6.8",
+    "change-case": "^5.4.4",
+    "chart.js": "^4.4.2",
+    "cookies-next": "^4.1.1",
+    "lodash": "^4.17.21",
+    "next": "14.2.1",
+    "prettier-plugin-tailwindcss": "^0.5.12",
+    "react": "^18",
+    "react-chartjs-2": "^5.2.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.4",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.0.1",
+    "react-typed": "^2.0.12",
+    "react-web-share": "^2.0.2",
+    "sass": "^1.74.1",
+    "tailwind-merge": "^2.2.2",
+    "zod": "^3.23.6",
+    "zod-validation-error": "^3.2.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.13.0",
+    "postcss": "^8",
+    "prisma": "^5.13.0",
+    "tailwindcss": "^3.4.1"
+  }
+}

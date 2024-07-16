@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// import nuinto from google fonts
+// @import url
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@layer base {
+    body {
+        @apply min-h-screen bg-gray-200 text-gray-700;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply flex items-center justify-center gap-4 rounded-md bg-primary-600 px-4 py-2.5 text-center font-medium text-white disabled:cursor-not-allowed disabled:opacity-75;
+    }
+
+    .led {
+        @apply block size-5 rounded-full transition-all;
+
+        background-color: hsl(0, 100%, 50%);
+        box-shadow: inset hsl(0, 100%, 20%) 0 -1px 9px;
+
+        &.green {
+            background-color: hsl(80, 100%, 50%);
+            box-shadow:
+                rgba(0, 0, 0, 0.2) 0 -1px 7px 1px,
+                inset hsla(80, 97%, 14%, 0.6) 0 -1px 9px,
+                hsl(80, 100%, 50%) 0 2px 12px;
+
+            &.animate {
+                animation: led-animation 1s infinite;
+                background-color: hsl(80, 100%, 50%);
+                box-shadow:
+                    rgba(0, 0, 0, 0.2) 0 -1px 7px 1px,
+                    inset hsla(80, 97%, 14%, 0.6) 0 -1px 9px,
+                    hsl(80, 100%, 50%) 0 2px 12px;
+
+                @keyframes led-animation {
+                    from {
+                        background-color: hsl(80, 100%, 35%);
+                    }
+
+                    50% {
+                        background-color: hsl(80, 100%, 50%);
+                        box-shadow:
+                            rgba(0, 0, 0, 0.2) 0 -1px 7px 1px,
+                            inset hsla(80, 97%, 14%, 0.6) 0 -1px 9px,
+                            hsl(80, 100%, 50%) 0 2px 12px;
+                    }
+                    to {
+                        background-color: hsl(80, 100%, 35%);
+                    }
+                }
+            }
+
+            // &.on {
+            //     background-color: hsl(80, 100%, 50%);
+            //     box-shadow:
+            //         rgba(0, 0, 0, 0.2) 0 -1px 7px 1px,
+            //         inset hsla(80, 97%, 14%, 0.6) 0 -1px 9px,
+            //         hsl(80, 100%, 50%) 0 2px 12px;
+            // }
+        }
+    }
+}
+
+@layer utilities {
+    .gradient {
+        @apply bg-gradient-to-br from-primary-600 to-primary-800;
+    }
+
+    .evm {
+        table {
+            @apply w-full table-auto border-collapse border border-gray-500;
+
+            td {
+                @apply border border-gray-300 px-2 py-2 md:px-3;
+            }
+        }
+    }
+
+    .vvpat-animate {
+        animation: animaiton 1 8s linear forwards;
+        // filter: drop-shadow(2px 2px 6px black);
+
+        @keyframes animaiton {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                // transform: translateY(-120%);
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .neon {
+        color: #ffd9e2;
+        text-shadow:
+            0 0 0 transparent,
+            0 0 10px #ff003c,
+            0 0 20px rgba(255, 0, 60, 0.5),
+            0 0 40px #ff003c,
+            0 0 100px #ff003c,
+            0 0 200px #ff003c,
+            0 0 300px #ff003c,
+            0 0 500px #ff003c,
+            0 0 1000px #ff003c;
+    }
+
+    .result-table {
+        @apply border border-gray-600 bg-gray-100 shadow-lg;
+
+        thead {
+            @apply bg-gray-300;
+            th {
+                @apply font-medium;
+            }
+        }
+
+        th,
+        td {
+            @apply border border-gray-600 px-2 py-1.5 md:px-3;
+        }
+    }
+
+    .card {
+        @apply bg-white px-4 py-8 rounded-md shadow-xl md:px-8;
+    }
+
+    .search-filter {
+        // [&_input]:py-2 [&_input]:text-sm [&_label]:text-sm [&_select]:py-2 [&_select]:text-sm
+        input,
+        select {
+            @apply py-2 text-xs md:text-sm;
+        }
+
+        label{
+            @apply text-sm;
+        }
+    }
+
+    .translate-popup{
+        select{
+            @apply px-3 py-1.5 w-full text-base md:text-lg rounded-md border-2 border-gray-300 focus:outline-none focus:border-primary-600 focus:bg-primary-50;
+        }
+    }
+}

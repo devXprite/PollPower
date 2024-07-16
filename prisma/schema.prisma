@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Vote {
+  id    String @id @default(cuid()) @map("_id")
+  email String @unique
+
+  name      String
+  gender    Gender
+  state     String
+  ip        String
+  userAgent String
+  age       Int
+
+  candidate String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Gender {
+  male
+  female
+  other
+}
